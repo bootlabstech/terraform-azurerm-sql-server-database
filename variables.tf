@@ -24,10 +24,6 @@ variable "administrator_login_password" {
   description = "(optional) describe your variable"
 }
 
-variable "type" {
-  type        = string
-  description = "(optional) describe your variable"
-}
 
 variable "connection_policy" {
   type        = string

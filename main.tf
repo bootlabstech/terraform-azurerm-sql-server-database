@@ -6,9 +6,7 @@ resource "azurerm_sql_server" "example" {
   administrator_login          = var.administrator_login
   administrator_login_password = var.administrator_login_password
   connection_policy            = var.connection_policy
-  identity {
-    type = var.type
-  }
+
 
 
 }

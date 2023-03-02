@@ -25,21 +25,21 @@ resource "azurerm_sql_database" "example" {
     azurerm_sql_server.example
   ]
 }
-resource "azurerm_private_endpoint" "endpoint" {
-  name                = var.private_endpoint_name
-  location            = var.location
-  resource_group_name = var.resource_group_name
-  subnet_id           = var.private_endpoint_subnet_id
+# resource "azurerm_private_endpoint" "endpoint" {
+#   name                = var.private_endpoint_name
+#   location            = var.location
+#   resource_group_name = var.resource_group_name
+#   subnet_id           = var.private_endpoint_subnet_id
 
-  private_service_connection {
-    name                           = "${var.private_endpoint_name}-connection"
-    private_connection_resource_id = azurerm_sql_server.example.id
-    is_manual_connection           = var.is_manual_connection
-    subresource_names              = ["sqlServer"]
+#   private_service_connection {
+#     name                           = "${var.private_endpoint_name}-connection"
+#     private_connection_resource_id = azurerm_sql_server.example.id
+#     is_manual_connection           = var.is_manual_connection
+#     subresource_names              = ["sqlServer"]
 
-  }
-  depends_on = [
-    azurerm_sql_server.example
-  ]
+#   }
+#   depends_on = [
+#     azurerm_sql_server.example
+#   ]
 
-}
+# }

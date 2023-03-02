@@ -57,20 +57,20 @@ variable "server_name" {
   description = "(optional) describe your variable"
 }
 
-variable "private_endpoint_subnet_id" {
-  type        = string
-  description = "The subnet where the API gateway will be created in."
-}
-variable "private_endpoint_name" {
-  type = string
-  description = "Name of the private endpoint used by the api gateway"
+# variable "private_endpoint_subnet_id" {
+#   type        = string
+#   description = "The subnet where the API gateway will be created in."
+# }
+# variable "private_endpoint_name" {
+#   type = string
+#   description = "Name of the private endpoint used by the api gateway"
   
-}
+# }
 
 
-variable "is_manual_connection" {
-  type = bool
-  description = "Manual connection or not"
-  default = false
+# variable "is_manual_connection" {
+#   type = bool
+#   description = "Manual connection or not"
+#   default = false
   
-}
+# }

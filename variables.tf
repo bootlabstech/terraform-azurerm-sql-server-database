@@ -29,7 +29,7 @@ variable "connection_policy" {
   type        = string
   description = "Specifies the plan's pricing tier."
 }
-variable "db_name" {
+variable "name" {
   type        = string
   description = "name of the resource group"
 }

@@ -15,7 +15,7 @@ resource "azurerm_sql_database" "example" {
   name                             = var.name
   resource_group_name              = var.resource_group_name
   location                         = var.location
-  server_name                      = var.serve_name
+  server_name                      = azurerm_sql_server.example.name
   requested_service_objective_name = var.requested_service_objective_name
   create_mode                      = var.create_mode
   edition                          = var.edition
@@ -43,3 +43,4 @@ resource "azurerm_sql_database" "example" {
 #   ]
 
 # }
+

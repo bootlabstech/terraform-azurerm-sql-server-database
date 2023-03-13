@@ -12,6 +12,7 @@ variable "location" {
 variable "server_version" {
   type        = string
   description = "name of the azurerm_app_service_plan"
+  default = "12.0"
 }
 
 variable "administrator_login" {
@@ -28,14 +29,11 @@ variable "administrator_login_password" {
 variable "connection_policy" {
   type        = string
   description = "Specifies the plan's pricing tier."
+  default = "Default"
 }
 variable "name" {
   type        = string
   description = "name of the resource group"
-}
-variable "serve_name" {
-  type        = string
-  description = "name of the azurerm_app_service_plan"
 }
 
 variable "requested_service_objective_name" {
@@ -51,6 +49,7 @@ variable "edition" {
 variable "create_mode" {
   type        = string
   description = "(optional) describe your variable"
+  default = "Default"
 }
 variable "server_name" {
   type        = string
